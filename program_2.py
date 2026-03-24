@@ -22,8 +22,8 @@ def main():
 
     #Check if user ended loop
     if count != 0:
-            with open("numbers.txt", "w") as numbers:
-                #Write random numbers to numbers.txt
+            with open("random_numbers.txt", "w") as numbers:
+                #Write random numbers to random_numbers.txt
                 for i in range(count - 1):
                     randomNumber = random.randint(1, 500)
                     numbers.write(f"{randomNumber}\n")
@@ -33,7 +33,7 @@ def main():
                 numbers.write(f"{randomNumber}")
 
                 #Notify user of random numbers added
-                print(f"{count} random numbers from 1 to 500 have been added to numbers.txt")
+                print(f"{count} random numbers from 1 to 500 have been added to random_numbers.txt")
 
     else:
         print("Program ended by user.")
