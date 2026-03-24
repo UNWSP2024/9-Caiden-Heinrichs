@@ -4,10 +4,13 @@
 
 
 def count_file_lines():
-    with open("names.txt", "r") as names:
-        numberOfNames = len(names.readlines())
+    try:
+        with open("names.txt", "r") as names:
+            numberOfNames = len(names.readlines())
 
-    print(f"There are {numberOfNames} names.")
+        print(f"There are {numberOfNames} names.")
+    except:
+        print("File not found.")
 
 if __name__ == '__main__':
     count_file_lines()
